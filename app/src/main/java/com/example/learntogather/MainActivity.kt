@@ -6,8 +6,9 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -45,11 +46,13 @@ fun GreetingImage(title: String, description: String, content: String) {
             painter = image,
             contentDescription = null,
         )
+        Spacer(modifier = Modifier.height(16.dp))
         GreetingText(
             title = title,
             description = description,
             content = content,
         )
+        Spacer(modifier = Modifier.height(16.dp))
     }
 }
 
@@ -62,6 +65,8 @@ fun GreetingText(title: String, description: String, content: String, modifier: 
             modifier = modifier.padding(16.dp)
         )
 
+        Spacer(modifier = Modifier.height(16.dp))
+
         Text(
             text = description,
             fontSize = 18.sp,
@@ -71,6 +76,8 @@ fun GreetingText(title: String, description: String, content: String, modifier: 
                 end=16.dp
             )
         )
+
+        Spacer(modifier = Modifier.height(16.dp))
 
         Text(
             text = content,
